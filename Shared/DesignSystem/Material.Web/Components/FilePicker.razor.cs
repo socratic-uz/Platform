@@ -231,14 +231,6 @@ public partial class FilePicker : ComponentBase
         {
             bytes = byteString.ToByteArray();
         }
-        else if (contentObj != null)
-        {
-            var method = contentObj.GetType().GetMethod("ToByteArray");
-            if (method != null)
-            {
-                bytes = (byte[])method.Invoke(contentObj, null)!;
-            }
-        }
 
         var base64Data = Convert.ToBase64String(bytes);
         var contentType = "image/png";

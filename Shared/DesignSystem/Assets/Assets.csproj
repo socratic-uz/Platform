@@ -47,7 +47,7 @@
     <Exec Command="node &quot;$(MSBuildThisFileDirectory)scripts/generate-icon-constants.mjs&quot;" WorkingDirectory="$(MSBuildThisFileDirectory)" ContinueOnError="WarnAndContinue" StandardOutputImportance="Normal" />
   </Target>
 
-  <!-- Single-file CSS & JS bundling for Release/Cluster/LocalDebug (or -p:BundleAssets=true); Debug stays unbundled for Hot Reload -->
+  <!-- Single-file CSS & JS bundling for Release (or -p:BundleAssets=true); Debug stays unbundled for Hot Reload -->
   <Target Name="BuildReleaseAssetsBundle"
           AfterTargets="BuildAssetsBundle"
           BeforeTargets="ResolveStaticWebAssetsInputs;AssignTargetPaths"

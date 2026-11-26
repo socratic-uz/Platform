@@ -1,10 +1,16 @@
 <Project>
   <PropertyGroup>
+    <_ParentPackagesProps>$([MSBuild]::GetPathOfFileAbove('Directory.Packages.props', '$(MSBuildThisFileDirectory)../'))</_ParentPackagesProps>
+  </PropertyGroup>
+
+  <Import Project="$(_ParentPackagesProps)" Condition="'$(_ParentPackagesProps)' != '' and Exists('$(_ParentPackagesProps)')" />
+
+  <PropertyGroup Condition="'$(_ParentPackagesProps)' == '' or !Exists('$(_ParentPackagesProps)')">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(_ParentPackagesProps)' == '' or !Exists('$(_ParentPackagesProps)')">
     <PackageVersion Include="AngleSharp" Version="1.8.1" />
     <PackageVersion Include="Ardalis.GuardClauses" Version="5.0.0" />
     <PackageVersion Include="Ardalis.Result" Version="9.0.1" />
@@ -50,13 +56,11 @@
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="11.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.3.0" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="11.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Localization" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Extensions.ML" Version="5.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.3.0" />
-    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.14.0" />
-    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.14.0" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="11.0.1" />
     <PackageVersion Include="Microsoft.JSInterop" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Maui.Controls" Version="11.0.10" />
     <PackageVersion Include="Microsoft.ML.OnnxRuntime" Version="1.24.1" />
@@ -70,9 +74,7 @@
     <PackageVersion Include="Minio" Version="7.0.0" />
     <PackageVersion Include="Moq" Version="4.20.72" />
     <PackageVersion Include="NetTopologySuite" Version="2.5.0" />
-    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageVersion Include="OpenAI" Version="2.12.0" />
-    <PackageVersion Include="OpenLayers.Blazor" Version="2.5.0" />
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.18.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.18.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.18.0" />

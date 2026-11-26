@@ -60,9 +60,15 @@ public partial class MarkdownSection : ComponentBase
     {
         if (firstRender)
         {
-            // import code for highlighting code blocks
-            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Assets/js/scripts.js");
-            await _jsModule.InvokeVoidAsync("runMermaid");
+            try
+            {
+                // import code for highlighting code blocks
+                _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Assets/js/scripts.js");
+                await _jsModule.InvokeVoidAsync("runMermaid");
+            }
+            catch (JSDisconnectedException) { }
+            catch (JSException) { }
+            catch (TaskCanceledException) { }
         }
 
         if (firstRender || _markdownChanged)
@@ -81,10 +87,18 @@ public partial class MarkdownSection : ComponentBase
             {
                 await OnContentConverted.InvokeAsync();
             }
-            await _jsModule.InvokeVoidAsync("highlight");
-            await _jsModule.InvokeVoidAsync("addCopyButton");
-
-            await _jsModule.InvokeVoidAsync("runMermaid");
+            if (_jsModule is not null)
+            {
+                try
+                {
+                    await _jsModule.InvokeVoidAsync("highlight");
+                    await _jsModule.InvokeVoidAsync("addCopyButton");
+                    await _jsModule.InvokeVoidAsync("runMermaid");
+                }
+                catch (JSDisconnectedException) { }
+                catch (JSException) { }
+                catch (TaskCanceledException) { }
+            }
 
         }
     }

@@ -98,7 +98,6 @@ namespace Smart.Web.Components
             }
 
             await OnValidSubmit.InvokeAsync(context);
-            StateHasChanged();
         }
 
         // Dialog Methods

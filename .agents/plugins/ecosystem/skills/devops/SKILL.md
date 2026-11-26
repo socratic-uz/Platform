@@ -1,14 +1,14 @@
 ---
 name: devops
 description: >-
-  CI/CD pipelines, container orchestration, Kubernetes/Helm deployment with Aspirate, and Windows POS desktop installer packaging for Socratic.
-  USE FOR: packaging deployments with Aspirate (aspirate generate for Docker Compose / Kubernetes Helm), configuring GitHub Actions CI/CD workflows (.github/workflows/Socratic.yml), Docker runners, and building offline Windows POS installers with InnoSetup.
+  CI/CD pipelines (Argo Workflows & ArgoCD), container orchestration, Kubernetes/Helm deployment with Aspirate, and Windows POS desktop installer packaging for Socratic.
+  USE FOR: packaging deployments with Aspirate (aspirate generate for Docker Compose / Kubernetes Helm), configuring Argo Workflows / Argo Events / ArgoCD CI/CD pipelines (infrastructure/kubernetes/infrastructure/base/charts/argo-workflows), and building offline Windows POS installers with InnoSetup.
   DO NOT USE FOR: multi-tier Git submodule commit sequencing (use git-submodules) or C# business logic.
 ---
 
 # Socratic DevOps: Aspirate, Kubernetes Helm, CI/CD & POS Installers
 
-This skill covers containerization, Kubernetes/Helm generation via Aspirate, GitHub Actions CI/CD pipelines, and offline Windows POS installer packaging.
+This skill covers containerization, Kubernetes/Helm generation via Aspirate, Argo Workflows CI/CD pipelines, and offline Windows POS installer packaging.
 For multi-tier Git submodule commit sequencing, use [git-submodules](../git-submodules/SKILL.md).
 
 ---
@@ -29,11 +29,10 @@ The generated manifests and Helm charts are stored in `infrastructure/` and depl
 
 ---
 
-## 2. 🚀 GitHub Actions CI/CD (`.github/workflows/Socratic.yml`)
+## 2. 🚀 Argo Workflows & ArgoCD CI/CD
 
-- Custom self-hosted and container runners are defined in `.github/runners/base/Dockerfile` and `.github/runners/dotnet-aot/Dockerfile`.
+- CI/CD pipelines, build workflows, and event-driven triggers are managed via **Argo Workflows**, **Argo Events**, and **ArgoCD** (`infrastructure/kubernetes/infrastructure/base/charts/argo-workflows`).
 - Standard build configurations across all solutions and projects: `Debug`, `Release`.
-- Artifact publishing uses `.github/actions/upload-s3/action.yml` (MinIO/S3) and `.github/actions/update-gitops/action.yml`.
 
 ---
 
