@@ -45,14 +45,17 @@ namespace Infrastructure.Core
                 return;
 
             services.AddGrpcClient<TClient>(typeof(TClient).Name, o => o.Address = targetUri)
-                    .ConfigurePrimaryHttpMessageHandler(() => new GrpcWebHandler(new HttpClientHandler
+                    .ConfigurePrimaryHttpMessageHandler(() =>
                     {
+                        var innerHandler = new HttpClientHandler();
 #if DEBUG
-                        ServerCertificateCustomValidationCallback = !OperatingSystem.IsBrowser() && targetUri.IsLoopback
-                            ? HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-                            : null
+                        if (!OperatingSystem.IsBrowser() && targetUri.IsLoopback)
+                        {
+                            innerHandler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+                        }
 #endif
-                    }))
+                        return new GrpcWebHandler(innerHandler);
+                    })
                     .ConfigureChannel(o => o.UnsafeUseInsecureChannelCallCredentials = targetUri.Scheme == Uri.UriSchemeHttp)
                     .AddCallCredentials((c, m, s) => CreateCallCredentials(c, m, s));
         }
